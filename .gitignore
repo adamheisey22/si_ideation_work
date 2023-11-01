@@ -1,0 +1,7 @@
+SI_env/
+
+.data
+_pychache_
+__pycache__/
+.ipynb_checkpoints
+
