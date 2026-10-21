@@ -4,15 +4,15 @@ import sqlite3
 import numpy as np
 
 #data folder 
-os.chdir(r'C:\Users\si_ideation\.data')
+os.chdir(r'path/to/data')
 
-#read in data from Hilary Coon. File contains case cohort for IHC (suicide deaths with ICD codes) - 2018 -- 2022 
-df_tc = pd.read_csv('true_cases_IH.csv')
+#read in the true-case cohort file
+df_tc = pd.read_csv('true_cases.csv')
 
-#data prep for merge with other data file from Ken 
+#data prep for merge with the case-level data file
 df_tc = df_tc.rename(columns = {'RedCapID':'REDCAPID'})
 
-#data from ken with more info on cases
+#additional case-level information
 df_c = pd.read_csv('Case_w_empi.csv')
 
 df_m = pd.merge(df_tc, df_c, how='left', on='REDCAPID')
@@ -26,7 +26,7 @@ df_f = df_f.rename(columns = {'CURR_PERSON_MK' : 'person_mk'} )
 print(df_f['person_mk'].nunique())
 
 #connect to sqlite db file with data
-os.chdir(r'C:\si_ideation\sql')
+os.chdir(r'path/to/sql')
 
 conn = sqlite3.connect("notes_DB.db")
 cur = conn.cursor()

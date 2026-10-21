@@ -298,7 +298,7 @@ note_c = "NOTE_TEXT"
  
 #df = pd.read_excel(data_p)
 # df = pd.read_csv (data_p)
-# os.chdir(r'C:\Users\qia22677\OneDrive - Intermountain Healthcare\gh-repos\si_ideation_IH\si_ideation\sql')
+# os.chdir(r'path/to/sql')
 
 conn = sqlite3.connect("notes_DB_test.db")
 

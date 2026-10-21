@@ -5,3 +5,11 @@ _pychache_
 __pycache__/
 .ipynb_checkpoints
 
+
+# local data / exports (never commit patient data)
+*.db
+*.csv
+*.xlsx
+*.xls
+*.ann
+.DS_Store
