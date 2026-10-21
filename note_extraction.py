@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import re
 
-path = r'C:\Users\qia22677\OneDrive - Intermountain Healthcare\gh-repos\si_ideation_IH\notes'
+path = r'path/to/notes'
 
 os.chdir(path)
 
